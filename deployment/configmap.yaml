@@ -4,8 +4,8 @@ metadata:
   name: db-env
 data:
   DB_NAME: db_1
-  DB_USERNAME: postgres_1
-  DB_HOST: postgres_sqlservice
+  DB_USERNAME: postgres_user_1
+  DB_HOST: postgres_host_1
   DB_PORT: 5432
 ---
 apiVersion: v1
