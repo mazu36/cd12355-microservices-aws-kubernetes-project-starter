@@ -14,11 +14,12 @@ spec:
       containers:
       - name: postgresql
         image: postgres:latest
-        envFrom:
-        - configMapRef:
-            name: db-env
         env:
-        - name: DB_PASSWORD
+        - name: POSTGRES_DB
+          value: mydatabase_1
+        - name: POSTGRES_USER
+          value: myuser_1
+        - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
               name: db-secret

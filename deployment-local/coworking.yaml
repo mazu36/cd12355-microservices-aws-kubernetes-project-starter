@@ -50,9 +50,9 @@ spec:
         - configMapRef:
             name: db-env
         env:
-        - name: DB_PASSWORD
+        - name: DB_PASSWORD2
           valueFrom:
             secretKeyRef:
               name: db-secret
-              key: DB_PASSWORD
+              key: DB_PASSWORD2
       restartPolicy: Always
