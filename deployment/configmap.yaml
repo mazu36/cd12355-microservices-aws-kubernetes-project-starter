@@ -5,13 +5,6 @@ metadata:
 data:
   DB_NAME: "mydatabase_1"
   DB_USERNAME: "myuser_1"
-  DB_HOST: "postgresql-service"
+  DB_HOST: "10.100.153.29"
   DB_PORT: "5432"
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: db-secret
-type: Opaque
-data:
-  DB_SECRET: bXlwYXNzd29yZF8xCg==
+

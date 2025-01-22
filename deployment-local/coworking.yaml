@@ -32,8 +32,9 @@ spec:
       containers:
       - name: coworking
         # Locally hosted docker image
-        image: 022173613591.dkr.ecr.us-east-1.amazonaws.com/prj_coworking:0.0.7
-        imagePullPolicy: IfNotPresent
+        #image: <DOCKER_IMAGE_NAME>:<IMAGE_TAG>
+        image: test-coworking-analytics_3_8:latest
+        imagePullPolicy: IfNotPresent  
         livenessProbe:
           httpGet:
             path: /health_check
@@ -54,5 +55,5 @@ spec:
           valueFrom:
             secretKeyRef:
               name: db-secret
-              key: DB_PASSWORD
+              key: DB_SECRET
       restartPolicy: Always
