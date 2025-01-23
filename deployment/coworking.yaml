@@ -30,7 +30,8 @@ spec:
     spec:
       containers:
       - name: coworking
-        image: "022173613591.dkr.ecr.us-east-1.amazonaws.com/prj_coworking:0.0.10"
+        #image: "022173613591.dkr.ecr.us-east-1.amazonaws.com/prj_coworking:0.0.10"
+        image: "022173613591.dkr.ecr.us-west-1.amazonaws.com/prj_coworking:0.0.19"
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -47,10 +48,4 @@ spec:
         envFrom:
         - configMapRef:
             name: db-env
-        env:
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: DB_SECRET
       restartPolicy: Always

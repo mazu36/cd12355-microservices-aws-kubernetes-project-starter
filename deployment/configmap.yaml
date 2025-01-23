@@ -5,6 +5,7 @@ metadata:
 data:
   DB_NAME: "mydatabase_1"
   DB_USERNAME: "myuser_1"
-  DB_HOST: "10.100.153.29"
+  DB_HOST: "10.100.255.209"
   DB_PORT: "5432"
+  DB_PASSWORD: "mypassword_1"
 
